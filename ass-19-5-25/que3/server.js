@@ -82,7 +82,7 @@ app.get("/dishes/get", (req, res) => {
 });
 
 // Handle undefined routes
-app.use("*", (req, res) => {
+app.get((req, res) => {
   res.status(404).json({ error: "404 Not Found" });
 });
 
